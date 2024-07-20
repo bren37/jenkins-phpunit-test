@@ -1,8 +1,7 @@
 pipeline {
 	agent {
 		docker {
-			image: 'docker:24.0.5'
-			
+			image '24.0.5'
 		}
 	}
 	stages {
