@@ -1,7 +1,10 @@
 pipeline {
 	agent {
 		docker {
-			image 'composer:latest'
+			image: docker:24.0.5
+			services:
+    				- name: registry.hub.docker.com/library/docker:24.0.5-dind
+      				alias: docker
 		}
 	}
 	stages {
